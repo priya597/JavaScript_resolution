@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.html
 
 <script>
 
@@ -31,4 +31,37 @@ console.log(b);
 
 </script>
 
+ -->
 
+
+
+<div> <object
+        data="https://storage.googleapis.com/purplle-media/Invoice/2024-01-23/248239275/240249463/1495/GVP38938948034.pdf"
+        type="application/pdf" width="100%" height="100%">
+        <p>Unable to display PDF file. <a
+                href="https://storage.googleapis.com/purplle-media/Invoice/2024-01-23/248239275/240249463/1495/GVP38938948034.pdf">Download</a>
+            instead.</p>
+    </object> </div> <br> <br>
+<script>
+    set_printer = "Invoice Printer";
+    scaleContent = false;
+    window.onload = function () { //document
+        is_connected = 1
+		printed = true
+        setInterval(function () {
+            // if(is_connected && !printed) {
+                print_div();
+            // }
+        }, 500);
+    };
+   
+    function print_div() {
+        var print_div = document.getElementsByTagName('div');
+		console.log("print_div ",print_div);
+        for(let i = 0; i < print_div.length; i++) {
+            var print_el = print_div[i].innerHTML;
+			console.log("print_el ",print_el);
+            // printQz(print_el);
+        }
+    }
+</script>
